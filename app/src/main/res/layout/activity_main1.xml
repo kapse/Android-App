@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/relLayFields"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <in.wptrafficanalyzer.locationautogooglemapv2.CustomAutoCompleteTextView
+            android:id="@+id/atv_places1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim40"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim20"
+            android:layout_marginRight="@dimen/dim20"
+            android:layout_marginTop="@dimen/dim20"
+            android:background="#FFFFFF"
+            android:hint="Enter Source Place Here"
+            android:paddingLeft="@dimen/dim10"
+            android:paddingRight="@dimen/dim10"
+            android:singleLine="true"
+            android:textColor="@color/background_floating_material_dark" />
+
+        <in.wptrafficanalyzer.locationautogooglemapv2.CustomAutoCompleteTextView
+            android:id="@+id/atv_places2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim40"
+            android:layout_below="@+id/atv_places1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dim20"
+            android:layout_marginRight="@dimen/dim20"
+            android:layout_marginTop="@dimen/dim10"
+            android:background="#FFFFFF"
+            android:hint="Enter Destination Place Here"
+            android:paddingLeft="@dimen/dim10"
+            android:paddingRight="@dimen/dim10"
+            android:singleLine="true"
+            android:textColor="@color/background_floating_material_dark" />
+
+        <EditText
+            android:id="@+id/edtHeight1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim40"
+            android:layout_below="@+id/atv_places2"
+            android:layout_marginLeft="@dimen/dim20"
+            android:layout_marginRight="@dimen/dim20"
+            android:layout_marginTop="@dimen/dim10"
+            android:background="#FFFFFF"
+            android:hint="Enter height in KM's"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/dim10"
+            android:paddingRight="@dimen/dim10"
+            android:singleLine="true"
+            android:textColor="@color/background_floating_material_dark" />
+
+        <Button
+            android:id="@+id/showMap1"
+            android:layout_width="@dimen/dim150"
+            android:layout_height="@dimen/dim40"
+            android:layout_below="@+id/edtHeight1"
+            android:layout_marginLeft="@dimen/dim20"
+            android:layout_marginRight="@dimen/dim20"
+            android:layout_marginTop="@dimen/dim20"
+            android:background="@drawable/selector_white_button"
+            android:text="Get View">
+        </Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlvtSpeedFields"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edtSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim40"
+
+            android:layout_marginLeft="@dimen/dim20"
+            android:layout_marginRight="@dimen/dim20"
+            android:layout_marginTop="@dimen/dim10"
+            android:background="#FFFFFF"
+            android:hint="Enter speed in Km/hr"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/dim10"
+            android:paddingRight="@dimen/dim10"
+            android:singleLine="true"
+            android:textColor="@color/background_floating_material_dark"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim40"
+            android:layout_marginTop="@dimen/dim10"
+            android:layout_alignLeft="@+id/edtSpeed"
+            android:layout_below="@+id/edtSpeed"
+            android:text="Start"
+
+            android:background="@drawable/selector_white_button"
+            android:textColor="@color/background_floating_material_dark"/>
+
+        <Button
+            android:id="@+id/btnStope"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim40"
+            android:layout_marginTop="@dimen/dim10"
+            android:layout_toRightOf="@+id/btnStart"
+            android:layout_below="@+id/edtSpeed"
+            android:layout_marginLeft="@dimen/dim20"
+            android:text="Stop"
+            android:background="@drawable/selector_white_button"
+            android:textColor="@color/background_floating_material_dark"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlvtInternetConection"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_opaque">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dim50"
+            android:text="No internet connection"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

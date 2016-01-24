@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Balloon Ride</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="API_Key">AIzaSyCI1gU9ZU3AAZ830IuGoLnlEP9J6_PriMU</string>
+
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="enter_source">Enter source location</string>
+    <string name="enter_valid_source">Source location not found</string>
+    <string name="enter_dest">Enter destination location</string>
+    <string name="enter_valid_dest">Destination location not found</string>
+    <string name="enter_height">Enter Height</string>
+
+    <string name="enter_src_dest">Enter places</string>
+    <string name="baloon_view">Baloon view</string>
+    <string name="enter_speed">Enter speed</string>
+
+    <string name="fetching_your_location">Fetching your cuurent location...</string>
+    <string name="redirect_to_your_location">Redirecting to your location...</string>
+
+    <!--Network errors-->
+    <string name="error_internet">Please check your network connection and try again later.</string>
+</resources>

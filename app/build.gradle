@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        balloonride {
+            keyAlias 'balloonkey'
+            keyPassword 'nil00786'
+            storeFile file('../key/balloonkey.jks')
+            storePassword 'nil00786'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        applicationId "com.eew.balloonride"
+        minSdkVersion 15
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.balloonride
+    }
+    buildTypes {
+        release {
+
+            signingConfig signingConfigs.balloonride
+            minifyEnabled true
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            pseudoLocalesEnabled false
+        }
+
+        debug {
+            signingConfig signingConfigs.balloonride
+            proguardFile 'proguard-rules.pro'
+            minifyEnabled true
+            jniDebuggable true
+            renderscriptDebuggable true
+            testCoverageEnabled true
+        }
+    }
+    productFlavors {
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.19.0'
+    }
+}
+
+apply plugin: 'io.fabric'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}
+repositories {
+    mavenCentral()
+    maven {
+        url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.google.android.gms:play-services:7.3.0'
+    compile 'com.jakewharton:disklrucache:2.0.2'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
+    compile('com.twitter.sdk.android:twitter:1.11.0@aar') {
+        transitive = true;
+    }
+}

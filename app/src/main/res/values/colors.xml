@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nav_item_blue">#00b5fc</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <!--Selector Backgroud color code-->
+    <color name="seletor_grey">#d7d7d7</color>
+
+    <color name="black_opaque">#AA000000</color>
+</resources>

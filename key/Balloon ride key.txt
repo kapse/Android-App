@@ -1,0 +1,13 @@
+File path : balloonkey.jks
+file name : balloonkey.jks
+password : nil00786
+Alis : balloonkey
+alis password : nil00786
+certificates : 
+First n last name : Nilesh nagdeve
+Organisation unit : 50
+Organisation name : EEW Technologies
+city : Nagpur
+State : Maharastra
+Country code : 91
+
